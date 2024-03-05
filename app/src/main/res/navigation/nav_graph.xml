@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/calendarFragment">
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="at.fhv.mme.bt_dementia_app.view.calendar.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_calendarFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicationFragment"
+        android:name="at.fhv.mme.bt_dementia_app.view.medication.MedicationFragment"
+        android:label="fragment_medication"
+        tools:layout="@layout/fragment_medication" >
+        <action
+            android:id="@+id/action_medicationFragment_to_addMedicationFragment"
+            app:destination="@id/addMedicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="at.fhv.mme.bt_dementia_app.view.contacts.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" >
+        <action
+            android:id="@+id/action_contactsFragment_to_addContactFragment"
+            app:destination="@id/addContactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addContactFragment"
+        android:name="at.fhv.mme.bt_dementia_app.view.contacts.AddContactFragment"
+        android:label="AddContactFragment" />
+    <fragment
+        android:id="@+id/addActivityFragment"
+        android:name="at.fhv.mme.bt_dementia_app.view.calendar.AddActivityFragment"
+        android:label="AddActivityFragment" />
+    <fragment
+        android:id="@+id/addMedicationFragment"
+        android:name="at.fhv.mme.bt_dementia_app.view.medication.AddMedicationFragment"
+        android:label="fragment_add_medication"
+        tools:layout="@layout/fragment_add_medication" />
+</navigation>

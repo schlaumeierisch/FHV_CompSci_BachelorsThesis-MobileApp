@@ -1,0 +1,117 @@
+<resources>
+    <!-- base application theme -->
+    <style name="Theme.Btdementiaapp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/darkPrimaryColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- secondary brand color -->
+        <item name="colorSecondary">@color/accentColor</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- status bar color -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+        <!-- base font family & color -->
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- title of pages (e.g., Calendar) -->
+    <style name="bold_label_title">
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:textSize">32sp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <!-- subtitles of pages (e.g., date in Calendar) -->
+    <style name="semibold_label_title">
+        <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!-- title of items (RecyclerView items) -->
+    <style name="medium_label_title_item">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <!-- text of items (RecyclerView items) -->
+    <style name="regular_text_item">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <!-- button on items (RecyclerView items) -->
+    <style name="button_item" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textColor">@color/highEmphasis</item>
+        <item name="android:textSize">14sp</item>
+        <item name="iconTint">@color/highEmphasis</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- base add buttons (large) -->
+    <style name="add_button_large" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:backgroundTint">@color/accentColor</item>
+        <item name="android:textColor">@color/highEmphasis</item>
+        <item name="android:textSize">20sp</item>
+        <item name="iconTint">@color/highEmphasis</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- base back buttons (large) -->
+    <style name="back_button_large" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="android:textColor">@color/accentColor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="strokeColor">@color/accentColor</item>
+    </style>
+
+    <!-- cancel button (confirmation dialog -->
+    <style name="cancel_button_small" parent="back_button_large">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- confirm button (confirmation dialog -->
+    <style name="confirm_button_small" parent="add_button_large">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- upload button (profile image) -->
+    <style name="upload_image_button" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:textSize">18sp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- image buttons (navigate previous/next day) -->
+    <style name="select_day_image_button" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/rounded_image_button</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/accentColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="tint">@color/highEmphasis</item>
+    </style>
+
+    <!-- activity checkboxes (done / not done yet) -->
+    <style name="done_checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:textColor">@color/accentColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="buttonTint">@color/accentColor</item>
+    </style>
+
+    <style name="not_done_yet_checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="buttonTint">@color/secondaryTextColor</item>
+    </style>
+
+</resources>

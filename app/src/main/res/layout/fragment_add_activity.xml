@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.calendar.AddActivityFragment">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_with_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- step one of add activity form -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stepGeneral"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilActivityName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/input_activity_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/icon_directions_run_24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietActivityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilActivityDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/input_activity_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilActivityName"
+            app:startIconDrawable="@drawable/icon_calendar_24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietActivityDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilActivityTime"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/input_activity_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilActivityDate"
+            app:startIconDrawable="@drawable/icon_access_time_24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietActivityTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnNextStep1"
+            style="@style/add_button_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/button_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- step two of add activity form -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stepReminder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilReminderTime"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/icon_alarm_24dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvReminderTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_reminder_time"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilReminderAudio"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/ibtnPlayReminderAudio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilReminderTime"
+            app:startIconDrawable="@drawable/icon_audiotrack_24dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvReminderAudio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_reminder_audio"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/ibtnPlayReminderAudio"
+            style="@style/select_day_image_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tilReminderAudio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tilReminderAudio"
+            app:srcCompat="@drawable/icon_play_arrow_24dp"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilAdditionalReminderInfo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilReminderAudio">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietAdditionalReminderInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:hint="@string/input_additional_reminder_info"
+                android:inputType="textMultiLine"
+                android:lines="6"
+                android:maxLines="10"
+                android:scrollbars="vertical" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnStepBack1"
+            style="@style/back_button_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/button_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnNextStep2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnNextStep2"
+            style="@style/add_button_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/button_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnStepBack1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- step three of add activity form -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stepSummary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <TextView
+            android:id="@+id/tvActivityLabel"
+            style="@style/semibold_label_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/label_activity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvActivityLabel"
+            tools:text="Gardening" />
+
+        <TextView
+            android:id="@+id/tvDateAndTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvActivity"
+            tools:text="on 03/05/2023 at 09:00 h" />
+
+        <TextView
+            android:id="@+id/tvReminderLabel"
+            style="@style/semibold_label_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/label_reminder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDateAndTime" />
+
+        <TextView
+            android:id="@+id/tvReminderTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvReminderLabel"
+            tools:text="15 minutes before activity starts" />
+
+        <TextView
+            android:id="@+id/tvReminderAudio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvReminderTime"
+            tools:text="Queens - We Will Rock You" />
+
+        <TextView
+            android:id="@+id/tvAdditionalInfoLabel"
+            style="@style/semibold_label_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/label_additional_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvReminderAudio" />
+
+        <TextView
+            android:id="@+id/tvAdditionalInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdditionalInfoLabel"
+            tools:text="Don't forget to dress warmly because it might be cold outside." />
+
+        <Button
+            android:id="@+id/btnStepBack2"
+            style="@style/back_button_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/button_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnCreate"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnCreate"
+            style="@style/add_button_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/button_create"
+            app:icon="@drawable/icon_done_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnStepBack2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

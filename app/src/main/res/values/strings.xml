@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">bt-dementia-app</string>
+
+    <!-- calendar screens -->
+    <string name="title_calendar">Calendar</string>
+    <string name="button_add_activity">Add Activity</string>
+    <string name="input_activity_name">Activity name</string>
+    <string name="input_activity_date">Date</string>
+    <string name="input_activity_time">Time</string>
+    <string name="input_activity_date_set">%1$d/%2$d/%3$d</string>
+    <string name="input_activity_time_set">%1$d:%2$d</string>
+    <string name="input_reminder_time">Reminder time</string>
+    <string name="input_reminder_audio">Reminder audio</string>
+    <string name="input_additional_reminder_info">Additional reminder info</string>
+    <string name="label_activity">Activity</string>
+    <string name="label_reminder">Reminder</string>
+    <string name="label_additional_info">Additional Info</string>
+    <string name="text_activity_date_time">on %1$s at %2$s h</string>
+    <string name="text_activity_time">at %1$s h</string>
+    <string name="text_reminder_time">%1$s before activity starts</string>
+    <string-array name="reminder_times">
+        <item>0 minutes</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>20 minutes</item>
+        <item>25 minutes</item>
+        <item>30 minutes</item>
+        <item>35 minutes</item>
+        <item>40 minutes</item>
+        <item>45 minutes</item>
+        <item>50 minutes</item>
+        <item>55 minutes</item>
+        <item>60 minutes</item>
+    </string-array>
+    <string-array name="raw_files">
+        <item>@raw/high_life_richard_smithson</item>
+        <item>@raw/mood_of_summer_abbynoise</item>
+        <item>@raw/paradise_island_hartzmann</item>
+    </string-array>
+    <string-array name="raw_files_names">
+        <item>Richard Smithson - High Life</item>
+        <item>Abbynoise - Mood of Summer</item>
+        <item>Hartzmann - Paradise Island</item>
+    </string-array>
+
+    <!-- activity item -->
+    <string name="checkbox_done">Done</string>
+    <string name="checkbox_not_done_yet">Not done yet</string>
+    <string name="title_add_activity">Add Activity</string>
+
+    <!-- medication screens -->
+    <string name="title_medication">Medication</string>
+    <string name="button_add_medication">Add Medication</string>
+    <string name="title_add_medication">Add Medication</string>
+    <string name="input_medication_name">Medication name</string>
+    <string name="input_medication_day">Day</string>
+    <string name="input_medication_time">Time</string>
+    <string-array name="medication_day">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+    <string name="input_medication_amount">Amount</string>
+    <string name="input_medication_unit">Unit</string>
+    <string-array name="medication_unit">
+        <item>mg</item>
+        <item>ml</item>
+        <item>pill(s)</item>
+    </string-array>
+    <string name="label_medication">Medication</string>
+    <string name="label_time">Time</string>
+    <string name="label_amount">Amount</string>
+    <string name="text_medication_day">Every %1$s</string>
+    <string name="text_medication_time">at %1$s h</string>
+    <string name="text_medication_amount">%1$s %2$s</string>
+    <string name="text_medication_day_time">Every %1$s at %2$s h</string>
+
+    <!-- contacts screens -->
+    <string name="title_contacts">Contacts</string>
+    <string name="button_add_contact">Add Contact</string>
+    <string name="title_add_contact">Add Contact</string>
+    <string name="input_contact_name">Contact name</string>
+    <string name="input_relation">Relation</string>
+    <string name="input_phone_number">Phone number</string>
+    <string name="button_select_image">Select image</string>
+    <string name="label_profile_image_selected">Profile image selected.</string>
+    <string name="label_contact">Contact</string>
+    <string name="label_phone_number">Phone Number</string>
+    <string name="label_image">Image</string>
+    <string name="text_contact_name_relation">%1$s (%2$s)</string>
+
+    <!-- contact item -->
+    <string name="button_call">Call</string>
+    <string name="button_next">Next</string>
+    <string name="button_create">Create</string>
+    <string name="button_back">Back</string>
+
+    <!-- confirmation dialog -->
+    <string name="button_confirm">Yes</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="label_confirmation_discard_title">Discard</string>
+    <string name="label_confirmation_delete_title">Delete %1$s</string>
+    <string name="label_confirmation_discard_text">Are you sure you want to discard the information provided and return to the previous screen?</string>
+    <string name="label_confirmation_delete_text">Are you sure you want to delete this %1$s?</string>
+
+    <!-- toast messages -->
+    <string name="toast_no_image_chosen">No image chosen</string>
+    <string name="toast_provide_information">Please provide all information</string>
+    <string name="toast_call_contact_failure">Not able to call contact</string>
+    <string name="toast_call_contact_permission_required">Permission required to call contact</string>
+    <string name="toast_select_audio_first">Please select an audio file first</string>
+</resources>
